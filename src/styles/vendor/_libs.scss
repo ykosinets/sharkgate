@@ -1,2 +1,15 @@
 @import "import/normalize";
 @import "import/smart-grid";
+@import "material-dashboard/variables";
+
+@import "material-dashboard";
+.card {
+  .card-header-success .card-icon,
+  .card-header-success .card-text,
+  .card-header-success:not(.card-header-icon):not(.card-header-text),
+  &.bg-success,
+  &.card-rotate.bg-success .front,
+  &.card-rotate.bg-success .back {
+    background: linear-gradient(60deg, #7961aa, #41a1c8);
+  }
+}
