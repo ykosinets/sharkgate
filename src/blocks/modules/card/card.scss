@@ -1,3 +1,17 @@
-.navigation{
+.card {
+  box-shadow: none;
 
+  .card-header-success:not(.card-header-icon):not(.card-header-text) {
+    background-image: linear-gradient(to bottom, #70b0c9, #41a1c8);
+    box-shadow: 0 4px 20px 0 rgba(0, 0, 0, 0.14), 0 7px 10px -5px #70b0c9;
+  }
+
+  .card-header-success .card-icon,
+  .card-header-success .card-text,
+  .card-header-success:not(.card-header-icon):not(.card-header-text),
+  &.bg-success,
+  &.card-rotate.bg-success .front,
+  &.card-rotate.bg-success .back {
+    background: linear-gradient(60deg, #7961aa, #41a1c8);
+  }
 }
