@@ -1,3 +1,33 @@
-.navigation{
+.nav-tabs .nav-item .nav-link{
+  z-index: 2;
+  font-size: 1.125rem;
+  font-weight: 300;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  align-items: center;
+  justify-content: space-between;
 
+  .material-icons{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 26px;
+    width: 26px;
+    margin-right: 10px;
+
+
+    img{
+      display: block;
+    }
+  }
+
+  &:hover,
+  &:focus,
+  &:active,
+  &:focus:hover,
+  &:active:hover{
+    font-weight: 300;
+  }
 }

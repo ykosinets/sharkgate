@@ -1,12 +1,255 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="en">
 @@include("../../blocks/head.html")
 
 <body>
-@@include("../../blocks/modules/header/header.html", {"title": "Analytics"})
-@@include("../../blocks/modules/footer/footer.html")
-@@include("../../blocks/modules/navigation/navigation.html")
-<script src="../js/main.js"></script>
-<script src="../js/vendor.js"></script>
+<main class="wrapper">
+  @@include("../../blocks/modules/navigation/navigation.html")
+
+  <div class="main-panel">
+    @@include("../../blocks/modules/header/header.html", {"title": "Speed"})
+
+    <div class="content">
+      <div class="content">
+        <div class="container-fluid">
+
+          <!-- title -->
+          <div class="row">
+            <div class="col-md-12">
+              <div class="card card-simple">
+                <div class="card-header card-header-success card-header-text">
+                  <div class="card-icon">
+                    <i class="material-icons"><img src="img/icons/flash-xl.png" alt=""></i>
+                  </div>
+                </div>
+
+                <div class="card-body">
+                  <div class="row">
+                    <div class="col-md-8 mb-md-0 mb-3">
+                      <h4 class="card-title">Speed</h4>
+                      <p>
+                        Manage performance settings for your website
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- auto minify -->
+          <div class="row">
+            <div class="col-md-12">
+              <div class="card card-simple">
+                <div class="card-header card-header-success card-header-text">
+                  <h4 class="card-title">Auto Minify:</h4>
+                </div>
+
+                <div class="card-body">
+                  <div class="row">
+                    <div class="col-md-8 mb-md-0 mb-3">
+                      <p>
+                        Reduce the file size of source code on your website.
+                      </p>
+                      <p>
+                        Note: Purge cache to have your change take effect immediately.
+                      </p>
+                    </div>
+
+                    <div class="col-md-4 d-flex flex-column justify-content-start align-items-end">
+                      <div class="togglebutton">
+                        <label>
+                          <input type="checkbox">
+                          JavaScript:
+                          <span class="toggle-text">
+                          <span class="toggle"></span>
+                        </span>
+                        </label>
+                      </div>
+                      <div class="togglebutton">
+                        <label>
+                          <input type="checkbox">
+                          CSS:
+                          <span class="toggle-text">
+                          <span class="toggle"></span>
+                        </span>
+                        </label>
+                      </div>
+                      <div class="togglebutton">
+                        <label>
+                          <input type="checkbox">
+                          HTML:
+                          <span class="toggle-text">
+                          <span class="toggle"></span>
+                        </span>
+                        </label>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="card-footer">
+                  <h6>Feature provided by Cloudflare</h6>
+                  <p class="card-category">
+                    <a href="javascript:void(0)">API
+                      <i class="material-icons">arrow_right</i>
+                    </a>
+                    <a href="javascript:void(0)">Help<i class="material-icons">arrow_right</i></a>
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- mobile redirect-->
+          <div class="row">
+            <div class="col-md-12">
+              <div class="card card-simple">
+                <div class="card-header card-header-success card-header-text">
+                  <h4 class="card-title">Mobile Redirect:</h4>
+                </div>
+
+                <div class="card-body">
+                  <div class="row">
+                    <div class="col-md-8 mb-md-0 mb-3">
+                      <p>
+                        Redirect visitors that are using mobile devices to a mobile-optimized website.
+                      </p>
+                    </div>
+
+                    <div class="col-md-4 d-flex flex-column justify-content-start align-items-end">
+                      <div class="togglebutton">
+                        <label>
+                          <input type="checkbox">
+                          Mobile Redirection:
+                          <span class="toggle-text">
+                          <span class="toggle"></span>
+                        </span>
+                        </label>
+                      </div>
+
+
+                      <select class="selectpicker" data-size="7" data-style="btn btn-bordered btn-round"
+                              title="When to purge">
+                        <option value="1" selected>PARENTSCLOUD.COM</option>
+                        <option value="2">PARENTSCLOUD.COM</option>
+                        <option value="3">PARENTSCLOUD.COM</option>
+                      </select>
+
+                      <select class="selectpicker" data-size="7" data-style="btn btn-bordered btn-round"
+                              title="When to purge">
+                        <option value="1" selected>Keep Path</option>
+                        <option value="2">Change Path</option>
+                      </select>
+
+                    </div>
+                  </div>
+                </div>
+
+                <div class="card-footer">
+                  <h6>Feature provided by Cloudflare</h6>
+                  <p class="card-category">
+                    <a href="javascript:void(0)">API
+                      <i class="material-icons">arrow_right</i>
+                    </a>
+                    <a href="javascript:void(0)">Help<i class="material-icons">arrow_right</i></a>
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- brotli -->
+          <div class="row">
+            <div class="col-md-12">
+              <div class="card card-simple">
+                <div class="card-header card-header-success card-header-text">
+                  <h4 class="card-title">Brotli:</h4>
+                </div>
+
+                <div class="card-body">
+                  <div class="row">
+                    <div class="col-md-8 mb-md-0 mb-3">
+                      <p>
+                        Speed up page load times for your visitor’s HTTPS traffic by applying Brotli compression.
+                      </p>
+                    </div>
+
+                    <div class="col-md-4 d-flex flex-column justify-content-start align-items-end">
+                      <div class="togglebutton">
+                        <label>
+                          <input type="checkbox">
+                          <span class="toggle-text">
+                          <span class="toggle"></span>
+                        </span>
+                        </label>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="card-footer">
+                  <h6>Feature provided by Cloudflare</h6>
+                  <p class="card-category">
+                    <a href="javascript:void(0)">API
+                      <i class="material-icons">arrow_right</i>
+                    </a>
+                    <a href="javascript:void(0)">Help<i class="material-icons">arrow_right</i></a>
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- rocket loader -->
+          <div class="row">
+            <div class="col-md-12">
+              <div class="card card-simple">
+                <div class="card-header card-header-success card-header-text">
+                  <h4 class="card-title">Rocket Loader:</h4>
+                </div>
+
+                <div class="card-body">
+                  <div class="row">
+                    <div class="col-md-8 mb-md-0 mb-3">
+                      <p>
+                        Improve the paint time for pages that include Javascript.
+                      </p>
+                    </div>
+
+                    <div class="col-md-4 d-flex flex-column justify-content-start align-items-end">
+                      <div class="togglebutton">
+                        <label>
+                          <input type="checkbox">
+                          <span class="toggle-text">
+                          <span class="toggle"></span>
+                        </span>
+                        </label>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="card-footer">
+                  <h6>Feature provided by Cloudflare</h6>
+                  <p class="card-category">
+                    <a href="javascript:void(0)">API
+                      <i class="material-icons">arrow_right</i>
+                    </a>
+                    <a href="javascript:void(0)">Help<i class="material-icons">arrow_right</i></a>
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    @@include("../../blocks/modules/footer/footer.html")
+  </div>
+</main>
+@@include("../../blocks/scripts.html")
 </body>
 </html>

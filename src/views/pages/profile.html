@@ -1,12 +1,87 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="en">
 @@include("../../blocks/head.html")
 
 <body>
-@@include("../../blocks/modules/header/header.html", {"title": "Analytics"})
-@@include("../../blocks/modules/footer/footer.html")
-@@include("../../blocks/modules/navigation/navigation.html")
-<script src="../js/main.js"></script>
-<script src="../js/vendor.js"></script>
+<main class="wrapper">
+  @@include("../../blocks/modules/navigation/navigation.html")
+
+  <div class="main-panel">
+    @@include("../../blocks/modules/header/header.html", {"title": "Overview"})
+
+    <div class="content">
+      <div class="content">
+        <div class="container-fluid">
+
+          <!-- title -->
+          <div class="row">
+            <div class="col-md-12">
+              <div class="card">
+                <div class="card-header card-header-success card-header-icon">
+                  <div class="card-icon">
+                    <i class="material-icons"><img src="img/icons/man-user-xl.png" alt=""></i>
+                  </div>
+                </div>
+                <div class="card-body">
+                  <div class="row">
+                    <div class="col-md-12 col-md-12 d-flex justify-content-between align-items-center">
+                      <h3 class="card-title">Edit profile</h3>
+                    </div>
+                  </div>
+
+                  <div class="form">
+                    <div class="row">
+                      <div class="col-md-6">
+                        <div class="input-icon">
+                          <img src="img/icons/man-user-purple.png" alt="">
+                          <input class="form-control" type="text" id="name">
+                          <label class="label-floating" for="name">First name</label>
+                        </div>
+                        <hr class="d-md-block d-none">
+                      </div>
+
+                      <div class="col-md-6">
+                        <div class="input-icon">
+                          <img src="img/icons/envelop-purple.png" alt="">
+                          <input class="form-control" type="email" id="email">
+                          <label class="label-floating" for="email">Email</label>
+                        </div>
+                        <hr class="d-md-block d-none">
+                      </div>
+
+                      <div class="col-md-6">
+                        <div class="input-icon">
+                          <img src="img/icons/lock-purple.png" alt="">
+                          <input class="form-control" type="password" id="password">
+                          <label class="label-floating" for="password">Password</label>
+                        </div>
+                      </div>
+
+                      <div class="col-md-6">
+                        <div class="input-icon">
+                          <img src="img/icons/lock-purple.png" alt="">
+                          <input class="form-control" type="password" id="password-confirm">
+                          <label class="label-floating" for="password-confirm">Password Confirm</label>
+                        </div>
+                      </div>
+                    </div>
+                    <button type="submit" class="btn btn-primary btn-round btn-slim">
+                      Update Profile
+                      <span class="ripple-container"></span>
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    @@include("../../blocks/modules/footer/footer.html")
+  </div>
+</main>
+@@include("../../blocks/scripts.html")
 </body>
 </html>

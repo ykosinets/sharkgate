@@ -1,12 +1,161 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="en">
 @@include("../../blocks/head.html")
 
 <body>
-@@include("../../blocks/modules/header/header.html", {"title": "Analytics"})
-@@include("../../blocks/modules/footer/footer.html")
-@@include("../../blocks/modules/navigation/navigation.html")
-<script src="../js/main.js"></script>
-<script src="../js/vendor.js"></script>
+<main class="wrapper">
+  @@include("../../blocks/modules/navigation/navigation.html")
+
+  <div class="main-panel">
+    @@include("../../blocks/modules/header/header.html", {"title": "Network"})
+
+    <div class="content">
+      <div class="content">
+        <div class="container-fluid">
+
+          <!-- title -->
+          <div class="row">
+            <div class="col-md-12">
+              @@include("../../blocks/modules/card/card.html", {
+              "icon": "img/icons/pin-xl.png",
+              "title": "Network",
+              "body": "Manage network settings for your website"
+              })
+            </div>
+          </div>
+
+          <!-- ipv6 -->
+          <div class="row">
+            <div class="col-md-12">
+              <div class="card card-simple">
+                <div class="card-header card-header-success card-header-text">
+                  <h4 class="card-title">IPv6 Compatibility:</h4>
+                </div>
+
+                <div class="card-body">
+                  <div class="row">
+                    <div class="col-md-8 mb-md-0 mb-3">
+                      <p>
+                        Enable IPv6 support and gateway.
+                      </p>
+                    </div>
+
+                    <div class="col-md-4 d-flex flex-column justify-content-start align-items-end">
+                      <div class="togglebutton">
+                        <label>
+                          <input type="checkbox">
+                          <span class="toggle-text">
+                          <span class="toggle"></span>
+                        </span>
+                        </label>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="card-footer">
+                  <h6>Feature provided by Cloudflare</h6>
+                  <p class="card-category">
+                    <a href="javascript:void(0)">API
+                      <i class="material-icons">arrow_right</i>
+                    </a>
+                    <a href="javascript:void(0)">Help<i class="material-icons">arrow_right</i></a>
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- ws -->
+          <div class="row">
+            <div class="col-md-12">
+              <div class="card card-simple">
+                <div class="card-header card-header-success card-header-text">
+                  <h4 class="card-title">WebSockets:</h4>
+                </div>
+
+                <div class="card-body">
+                  <div class="row">
+                    <div class="col-md-8 mb-md-0 mb-3">
+                      <p>
+                        Manage network settings for yoAllow WebSockets connections to your origin server.
+                        Concurrent connection guidelines for your plan: low. <a href="javascript:void(0)">Learn
+                        more.</a>
+                      </p>
+                    </div>
+
+                    <div class="col-md-4 d-flex flex-column justify-content-start align-items-end">
+                      <div class="togglebutton">
+                        <label>
+                          <input type="checkbox">
+                          <span class="toggle-text">
+                          <span class="toggle"></span>
+                        </span>
+                        </label>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="card-footer">
+                  <h6>Feature provided by Cloudflare</h6>
+                  <p class="card-category">
+                    <a href="javascript:void(0)">API
+                      <i class="material-icons">arrow_right</i>
+                    </a>
+                    <a href="javascript:void(0)">Help<i class="material-icons">arrow_right</i></a>
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- ipv4 -->
+          <div class="row">
+            <div class="col-md-12">
+              <div class="card card-simple">
+                <div class="card-header card-header-success card-header-text">
+                  <h4 class="card-title">Pseudo IPv4:</h4>
+                </div>
+
+                <div class="card-body">
+                  <div class="row">
+                    <div class="col-md-8 mb-md-0 mb-3">
+                      <p>
+                        Adds an IPv4 header to requests when a client is using IPv6, but the server only supports IPv4.
+                      </p>
+                    </div>
+
+                    <div class="col-md-4 d-flex flex-column justify-content-start align-items-end">
+                      <select class="selectpicker" data-size="7" data-style="btn btn-bordered btn-round"
+                              title="When to purge">
+                        <option value="1" selected>Off</option>
+                        <option value="2">On</option>
+                      </select>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="card-footer">
+                  <h6>Feature provided by Cloudflare</h6>
+                  <p class="card-category">
+                    <a href="javascript:void(0)">API
+                      <i class="material-icons">arrow_right</i>
+                    </a>
+                    <a href="javascript:void(0)">Help<i class="material-icons">arrow_right</i></a>
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    @@include("../../blocks/modules/footer/footer.html")
+  </div>
+</main>
+@@include("../../blocks/scripts.html")
 </body>
 </html>

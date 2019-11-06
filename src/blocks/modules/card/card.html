@@ -1,32 +1,21 @@
 <div class="card">
   <div class="card-header card-header-success card-header-icon">
     <div class="card-icon">
-      <i class="material-icons">@@icon</i>
+      <i class="material-icons"><img src="@@icon" alt=""></i>
     </div>
     @@if (context.body) {
       <h4 class="card-title">@@title</h4>
     }
   </div>
-  <div class="card-body ">
+  <div class="card-body">
     <div class="row">
-      <div class="col-md-12">
+      <div class="col-md-12 col-md-12 d-flex justify-content-between align-items-center">
         @@if (!context.body) {
-        <h3 class="float-left">@@title</h3>
+        <h3 class="card-title">@@title</h3>
         }
         @@if (context.body) {
           <p>@@body</p>
         }
-
-        <div class="float-right">
-          <select class="selectpicker" data-size="7" data-style="btn btn-primary btn-round" title="Single Select">
-            <option disabled selected>Single Option</option>
-            <option value="2">Foobar</option>
-            <option value="3">Is great</option>
-            <option value="4">Is bum</option>
-            <option value="5">Is wow</option>
-            <option value="6">boom</option>
-          </select>
-        </div>
       </div>
     </div>
   </div>

@@ -1,12 +1,198 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="en">
 @@include("../../blocks/head.html")
 
 <body>
-@@include("../../blocks/modules/header/header.html", {"title": "Analytics"})
-@@include("../../blocks/modules/footer/footer.html")
-@@include("../../blocks/modules/navigation/navigation.html")
-<script src="../js/main.js"></script>
-<script src="../js/vendor.js"></script>
+<main class="wrapper">
+  @@include("../../blocks/modules/navigation/navigation.html")
+
+  <div class="main-panel">
+    @@include("../../blocks/modules/header/header.html", {"title": "Index"})
+
+    <div class="content">
+      <div class="content">
+        <div class="container-fluid">
+
+          <!-- title -->
+          <div class="row">
+            <div class="col-md-12">
+              @@include("../../blocks/modules/card/card.html", {
+              "icon": "img/icons/key-xl.png",
+              "title": "Cloudflare Keys"
+              })
+            </div>
+          </div>
+
+          <!-- table + map 1 -->
+          <div class="row">
+            <div class="col-md-12">
+              <div class="card">
+                <div class="card-header card-header-success card-header-icon card-header-icon--inset">
+                  <div class="inner-card-icon">
+                    <img src="img/icons/cloud-xl.png">
+                  </div>
+                  <h4 class="card-title">Cloudflare account settings</h4>
+                </div>
+
+                <div class="card-body">
+                  <div class="row">
+                    <div class="col-md-7 col-lg-5">
+                      <div class="input-icon">
+                        <img src="img/icons/envelop-purple.png" alt="">
+                        <input class="form-control" type="email" id="email">
+                        <label class="label-floating" for="email">Cloudflare E-mail</label>
+                      </div>
+
+                      <div class="input-description">
+                        <img src="img/icons/rounded-info-black.png" alt="">
+                        <p>This is the email address you use to login to your Cloudflare account and
+                          manage parentsoutloud.com</p>
+                      </div>
+
+                      <hr>
+
+                      <div class="input-icon">
+                        <img src="img/icons/lock-purple.png" alt="">
+                        <input class="form-control" type="password" id="key">
+                        <label class="label-floating" for="key">Cloudflare Global API Key</label>
+                      </div>
+
+                      <div class="input-description">
+                        <img src="img/icons/rounded-info-black.png" alt="">
+                        <p>Your Cloudflare API Key allows our dashboard to connect to your Cloudflare
+                          account for this site. See Where do I find my Cloudflare API Key in the FAQ
+                          section below</p>
+                      </div>
+                    </div>
+
+                    <div class="col-md-5 text-center">
+                      <p class="font-weight-bold size-20 pl-5 pr-5">
+                        Don't have a Cloudflare account
+                        for your site?</p>
+
+                      <a href="javascript:void(0)"
+                         class="btn btn-primary btn-round btn-xxl btn-underscore pr-5 pl-5 pb-3 mb-4 btn-block text-center">
+                        <u class="font-weight-light">
+                          Click here to go to the Cloudflare website
+                          and sign up for a FREE account.
+                        </u>
+                      </a>
+
+                      <h5 class="font-weight-bold mb-2">Rather we set it up for you?</h5>
+                      <p class="size-14">
+                        Talk to our support team on the chat box bottom right and
+                        we can set your site up on Cloudflare all for you so you can
+                        still sit back and relax whilst we do all the work!
+                      </p>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="card-footer">
+                  <p class="card-category">
+                    <a href="javascript:void(0)">API
+                      <i class="material-icons">arrow_right</i>
+                    </a>
+                    <a href="javascript:void(0)">Help<i class="material-icons">arrow_right</i></a>
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- table + map 2 -->
+          <div class="row">
+            <div class="col-md-12">
+              <div class="card">
+                <div class="card-header card-header-success card-header-icon card-header-icon--inset">
+                  <div class="inner-card-icon">
+                    <img src="img/icons/faq-xl.png">
+                  </div>
+                  <h4 class="card-title">FAQ</h4>
+                </div>
+
+                <div class="card-body">
+                  <div class="content-text">
+                    <div class="row">
+                      <div class="col-md-9">
+                        <h4>Where do I find my Cloudflare API key?</h4>
+                        <p>Login to your Cloudflare account for parentsoutloud.com.</p>
+                        <ul>
+                          <li>
+                            Go to My Profile.
+                          </li>
+                          <li>
+                            Scroll down to API Keys and locate Global API Key.
+                          </li>
+                          <li>
+                            Click the View button on the API Key to see your API identification code.
+                          </li>
+                        </ul>
+                        <a href="javascript:void(0)">See a Cloudflare article here explaining this same process.</a>
+                      </div>
+                    </div>
+                    <hr>
+
+                    <div class="row">
+                      <div class="col-md-9">
+                        <h4>Can I use a Cloudflare "FREE" account or do I need a paid one?</h4>
+                        <p>You can use the SharkGate & Cloudflare intergration with any type of Cloudflare account.</p>
+                        <p>
+                          With the Cloudflare FREE account linked to OneHourSiteFix's FIX & PROTECT plan by SharkGate
+                          you get
+                          an amazing set of features. With Speed, basic DDoS and tonnes more features from Cloudflare
+                          PLUS
+                          the SharkGate firewall you have a winning combination for a FAST and and SECURE site.
+                        </p>
+                        <p>
+                          If you purchase a Cloudflare PAID account you get even more features from Cloudflare and
+                          SharkGate
+                          firewall works perfectly with those as well. With SharkGate and Cloudflare working together
+                          you can
+                          really have your cake and eat it.
+                        </p>
+                      </div>
+                    </div>
+                    <hr>
+
+                    <div class="row">
+                      <div class="col-md-9">
+                        <h4>I don't understand this Cloudflare part and how to set it up. Can't you do it all for
+                          me?</h4>
+                        <p>Absolutely! We are expect in setting sites up on Cloudflare so they work perfectly with
+                          SharkGate.
+                          Just drop us a chat on the chat box bottom right or contact us on a ticket and our team can do
+                          everything
+                          for you. We can create a Cloudflare account, set up your site on it and link it up to
+                          SharkGate and
+                          this dashboard, you can just sit back and relax and wait for us to tell you it is all sorted.
+                          :)
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="card-footer">
+                  <h6>Feature provided by Cloudflare</h6>
+                  <p class="card-category">
+                    <a href="javascript:void(0)">API
+                      <i class="material-icons">arrow_right</i>
+                    </a>
+                    <a href="javascript:void(0)">Help<i class="material-icons">arrow_right</i></a>
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    @@include("../../blocks/modules/footer/footer.html")
+  </div>
+</main>
+@@include("../../blocks/scripts.html")
 </body>
 </html>

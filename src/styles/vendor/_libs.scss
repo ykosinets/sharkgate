@@ -1,5 +1,12 @@
 @import "import/normalize";
 @import "import/smart-grid";
-@import "material-dashboard/variables";
+@import "import/flipclock";
+@import "import/bootstrap-duallistbox.min";
 
+$brand-primary: #41a1c8;
+@import "material-dashboard/variables";
+[class*="worldMap"]{
+  width: 100%;
+}
+$border-radius-base: 8px;
 @import "material-dashboard";

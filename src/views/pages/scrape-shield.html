@@ -1,12 +1,163 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="en">
 @@include("../../blocks/head.html")
 
 <body>
-@@include("../../blocks/modules/header/header.html", {"title": "Analytics"})
-@@include("../../blocks/modules/footer/footer.html")
-@@include("../../blocks/modules/navigation/navigation.html")
-<script src="../js/main.js"></script>
-<script src="../js/vendor.js"></script>
+<main class="wrapper">
+  @@include("../../blocks/modules/navigation/navigation.html")
+
+  <div class="main-panel">
+    @@include("../../blocks/modules/header/header.html", {"title": "Scrape Shield"})
+
+    <div class="content">
+      <div class="content">
+        <div class="container-fluid">
+
+          <!-- title -->
+          <div class="row">
+            <div class="col-md-12">
+              @@include("../../blocks/modules/card/card.html", {
+              "icon": "img/icons/file-xl.png",
+              "title": "Scrape Shield",
+              "text": "Protect content on your site"
+              })
+            </div>
+          </div>
+
+          <!-- email -->
+          <div class="row">
+            <div class="col-md-12">
+              <div class="card card-simple">
+                <div class="card-header card-header-success card-header-text">
+                  <h4 class="card-title">Email Address Obfuscation:</h4>
+                </div>
+
+                <div class="card-body">
+                  <div class="row">
+                    <div class="col-md-8 mb-md-0 mb-3">
+                      <p>
+                        Display obfuscated email addresses on your website to prevent harvesting by bots and spammers,
+                        without visible changes to the address for human visitors.
+                      </p>
+                    </div>
+
+                    <div class="col-md-4 d-flex flex-column justify-content-start align-items-end">
+                      <div class="togglebutton">
+                        <label>
+                          <input type="checkbox">
+                          <span class="toggle-text">
+                          <span class="toggle"></span>
+                        </span>
+                        </label>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="card-footer">
+                  <h6>Feature provided by Cloudflare</h6>
+                  <p class="card-category">
+                    <a href="javascript:void(0)">API
+                      <i class="material-icons">arrow_right</i>
+                    </a>
+                    <a href="javascript:void(0)">Help<i class="material-icons">arrow_right</i></a>
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- server-side -->
+          <div class="row">
+            <div class="col-md-12">
+              <div class="card card-simple">
+                <div class="card-header card-header-success card-header-text">
+                  <h4 class="card-title">Server-side Excludes:</h4>
+                </div>
+
+                <div class="card-body">
+                  <div class="row">
+                    <div class="col-md-8 mb-md-0 mb-3">
+                      <p>
+                        Automatically hide specific content from disreputable visitors.
+                      </p>
+                    </div>
+
+                    <div class="col-md-4 d-flex flex-column justify-content-start align-items-end">
+                      <div class="togglebutton">
+                        <label>
+                          <input type="checkbox">
+                          <span class="toggle-text">
+                          <span class="toggle"></span>
+                        </span>
+                        </label>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="card-footer">
+                  <h6>Feature provided by Cloudflare</h6>
+                  <p class="card-category">
+                    <a href="javascript:void(0)">API
+                      <i class="material-icons">arrow_right</i>
+                    </a>
+                    <a href="javascript:void(0)">Help<i class="material-icons">arrow_right</i></a>
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- hotlink -->
+          <div class="row">
+            <div class="col-md-12">
+              <div class="card card-simple">
+                <div class="card-header card-header-success card-header-text">
+                  <h4 class="card-title">Hotlink Protection:</h4>
+                </div>
+
+                <div class="card-body">
+                  <div class="row">
+                    <div class="col-md-8 mb-md-0 mb-3">
+                      <p>
+                        Protect your images from off-site linking.
+                      </p>
+                    </div>
+
+                    <div class="col-md-4 d-flex flex-column justify-content-start align-items-end">
+                      <div class="togglebutton">
+                        <label>
+                          <input type="checkbox">
+                          <span class="toggle-text">
+                          <span class="toggle"></span>
+                        </span>
+                        </label>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="card-footer">
+                  <h6>Feature provided by Cloudflare</h6>
+                  <p class="card-category">
+                    <a href="javascript:void(0)">API
+                      <i class="material-icons">arrow_right</i>
+                    </a>
+                    <a href="javascript:void(0)">Help<i class="material-icons">arrow_right</i></a>
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    @@include("../../blocks/modules/footer/footer.html")
+  </div>
+</main>
+@@include("../../blocks/scripts.html")
 </body>
 </html>

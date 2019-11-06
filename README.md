@@ -6,7 +6,6 @@
 * styles with [SCSS](https://sass-lang.com/)
 * transpiler -- [Babel](https://babeljs.io/) to support JavaScript (ES6)
 * [Webpack](https://webpack.js.org/) to build js modules
-* [smart-grid](https://github.com/dmitry-lavrik/smart-grid) css grid
 
 ## Setup
 * setup [NodeJS](https://nodejs.org/en/)

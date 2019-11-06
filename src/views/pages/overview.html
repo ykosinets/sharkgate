@@ -1,12 +1,220 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="en">
 @@include("../../blocks/head.html")
 
 <body>
-@@include("../../blocks/modules/header/header.html", {"title": "Analytics"})
-@@include("../../blocks/modules/footer/footer.html")
-@@include("../../blocks/modules/navigation/navigation.html")
-<script src="../js/main.js"></script>
-<script src="../js/vendor.js"></script>
+<main class="wrapper">
+  @@include("../../blocks/modules/navigation/navigation.html")
+
+  <div class="main-panel">
+    @@include("../../blocks/modules/header/header.html", {"title": "Overview"})
+
+    <div class="content">
+      <div class="content">
+        <div class="container-fluid">
+
+          <!-- title -->
+          <div class="row">
+            <div class="col-md-12">
+              @@include("../../blocks/modules/card/card.html", {"icon": "img/icons/dashboard-xl.png", "title":
+              "Overview"})
+            </div>
+          </div>
+
+          <!-- protection -->
+          <div class="row">
+            <div class="col-md-12">
+              <div class="card">
+                <div class="card-header card-header-success card-header-icon card-header-icon--inset">
+                  <div class="inner-card-icon">
+                    <img src="img/icons/shield-check-circle.png">
+                  </div>
+                  <h4 class="card-title">Protection</h4>
+                </div>
+
+                <div class="card-body">
+                  <div class="row align-items-center justify-content-center">
+                    <div class="col-md-7">
+                      <div class="row">
+                        <div class="col-md-4 text-center status-block">
+                          <div class="img-wrapper">
+                            <img src="img/icons/cloudflare-large.png" alt="">
+                          </div>
+                          <span>Cloudflare</span>
+                          <div class="icon-xl claudframe">
+                            <i class="icon-times"></i>
+                          </div>
+                          <p class="protection">SPEED & PROTECTION:</p>
+                          <p class="status red">NOT ENABLED</p>
+                        </div>
+
+                        <div class="col-md-4 text-center status-block">
+                          <div class="img-wrapper">
+                            <img src="img/icons/sharkgate-blue.png" alt="">
+                          </div>
+                          <span>Cloudflare</span>
+                          <div class="icon-xl sharkgate">
+                            <i class="icon-check"></i>
+                          </div>
+                          <p class="protection">SPEED & PROTECTION:</p>
+                          <p class="status green">NOT ENABLED</p>
+                        </div>
+
+                        <div class="col-md-4 text-center status-block">
+                          <div class="img-wrapper">
+                            <img src="img/icons/worldwide.png" alt="">
+                          </div>
+                          <span>Your Website</span>
+                          <div class="icon-xl percentage">
+                            @@include("../../blocks/modules/fill/fill.html")
+                          </div>
+                          <p class="protection">SPEED & PROTECT:</p>
+                          <p class="status">at 50%</p>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="col-md-5">
+                      <div class="border-box">
+                        <h3 class="size-20 font-weight-normal mb-3">Quick Actions</h3>
+                        <div class="d-flex flex-column flex-md-row align-items-md-center align-items-end justify-content-between">
+                          <div class="mr-2">
+                            <h4 class="mb-2">Under Attack Mode</h4>
+                            <p>
+                              Activate SharkGate maximum
+                              security rules plus show visitors
+                              a Cloudflare JaavaScript challenge
+                              when visiting your site.
+                            </p>
+                          </div>
+
+                          <div class="togglebutton">
+                            <label>
+                              <input type="checkbox" checked="">
+                              <span class="toggle-text">
+                                <span class="toggle"></span>
+                              </span>
+                            </label>
+                          </div>
+                        </div>
+                        <hr>
+
+                        <div class="d-flex flex-column flex-md-row align-items-md-center align-items-end justify-content-between">
+                          <div class="mr-2">
+                            <h4 class="mb-2">Development Mode</h4>
+                            <p>
+                              Temporarily bypass SharkGate
+                              and Cloudflare caches. See
+                              changes to your origin server
+                              in real time.
+                            </p>
+                          </div>
+
+                          <div class="togglebutton">
+                            <label>
+                              <input type="checkbox" checked="">
+                              <span class="toggle-text">
+                                <span class="toggle"></span>
+                              </span>
+                            </label>
+                          </div>
+                        </div>
+                        <hr>
+
+                        <div class="d-flex flex-column flex-md-row align-items-md-center align-items-end justify-content-between">
+                          <div class="mr-2">
+                            <h4 class="mb-2">Purge All Caches</h4>
+                            <p>Purge All Cloudflare
+                              and SharkGate Caches
+                            </p>
+                          </div>
+
+                          <a class="btn btn-round btn-primary btn-slim" href="javascript:void(0)">Purge All</a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- stats -->
+          <div class="row">
+            <div class="col-md-12">
+              <div class="card">
+
+                <div
+                    class="card-header card-header-success card-header-icon card-header-icon--inset justify-content-between">
+                  <div class="inner-card-icon">
+                    <img src="img/icons/chart.png">
+                  </div>
+                  <h4 class="card-title">Stats</h4>
+
+                  <select class="selectpicker" data-size="7" data-style="btn btn-bordered btn-round"
+                          title="Single Select">
+                    <option value="1" selected>Last week</option>
+                    <option value="2">Last month</option>
+                    <option value="3">Last 3 month</option>
+                  </select>
+                </div>
+
+                <div class="card-body">
+                  <div class="row align-items-center justify-content-center">
+                    <div class="col-md-6">
+                      <div class="chart-holder shadow-box">
+                        <div id="blocked_sharkgate" class="ct-chart chart"></div>
+                        <div class="chart-description">
+                          <p class="size-20">Attacks Blocked</p>
+                          <p>Provided by <span class="color-sharkgate">Sharkgate</span></p>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="col-md-6">
+                      <div class="chart-holder shadow-box">
+                        <div id="blocked_cloudflare" class="ct-chart chart"></div>
+                        <div class="chart-description">
+                          <p class="size-20">Attacks Blocked</p>
+                          <p>Provided by <span class="color-cloudflare">Cloudflare</span></p>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="col-md-6">
+                      <div class="chart-holder shadow-box">
+                        <div id="total_cloudflare" class="ct-chart chart"></div>
+                        <div class="chart-description">
+                          <p class="size-20">Total Requests</p>
+                          <p>Provided by <span class="color-cloudflare">Cloudflare</span></p>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="col-md-6">
+                      <div class="chart-holder shadow-box">
+                        <div id="cached_cloudflare" class="ct-chart chart"></div>
+                        <div class="chart-description">
+                          <p class="size-20">Percent Cached</p>
+                          <p>Provided by <span class="color-cloudflare">Cloudflare</span></p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <a class="more-link" href="analytics.html">View More Analytics...</a>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    @@include("../../blocks/modules/footer/footer.html")
+  </div>
+</main>
+@@include("../../blocks/scripts.html")
 </body>
 </html>

@@ -757,7 +757,7 @@ md = {
     });
   },
 
-  initVectorMap: function() {
+  initVectorMap: function($obj) {
     var mapData = {
       "AU": 760,
       "BR": 550,
@@ -772,28 +772,30 @@ md = {
       "US": 2920,
     };
 
-    $('#worldMap').vectorMap({
-      map: 'world_mill_en',
-      backgroundColor: "transparent",
-      zoomOnScroll: false,
-      regionStyle: {
-        initial: {
-          fill: '#e4e4e4',
-          "fill-opacity": 0.9,
-          stroke: 'none',
-          "stroke-width": 0,
-          "stroke-opacity": 0
-        }
-      },
+    $obj.each(function(){
+      $(this).vectorMap({
+        map: 'world_mill_en',
+        backgroundColor: "transparent",
+        zoomOnScroll: false,
+        regionStyle: {
+          initial: {
+            fill: '#e4e4e4',
+            "fill-opacity": 0.9,
+            stroke: 'none',
+            "stroke-width": 0,
+            "stroke-opacity": 0
+          }
+        },
 
-      series: {
-        regions: [{
-          values: mapData,
-          scale: ["#AAAAAA", "#444444"],
-          normalizeFunction: 'polynomial'
-        }]
-      },
-    });
+        series: {
+          regions: [{
+            values: mapData,
+            scale: ["#AAAAAA", "#444444"],
+            normalizeFunction: 'polynomial'
+          }]
+        },
+      });
+    })
   }
 }
 

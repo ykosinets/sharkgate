@@ -1,12 +1,694 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="en">
 @@include("../../blocks/head.html")
 
 <body>
-@@include("../../blocks/modules/header/header.html", {"title": "Analytics"})
-@@include("../../blocks/modules/footer/footer.html")
-@@include("../../blocks/modules/navigation/navigation.html")
-<script src="../js/main.js"></script>
-<script src="../js/vendor.js"></script>
+<main class="wrapper">
+  @@include("../../blocks/modules/navigation/navigation.html")
+
+  <div class="main-panel">
+    @@include("../../blocks/modules/header/header.html", {"title": "Security"})
+
+    <div class="content">
+      <div class="content">
+        <div class="container-fluid">
+
+          <!-- title -->
+          <div class="row">
+            <div class="col-md-12">
+              <div class="card">
+                <div class="card-header card-header-success card-header-icon">
+                  <div class="card-icon">
+                    <i class="material-icons"><img src="img/icons/defense-xl.png" alt=""></i>
+                  </div>
+                </div>
+                <div class="card-body">
+                  <div class="row">
+                    <div class="col-md-12 col-md-12 d-flex justify-content-between align-items-center">
+                      <h3 class="card-title">Security</h3>
+
+                      <div>
+                        <select class="selectpicker" data-size="7" data-style="btn btn-bordered btn-round"
+                                title="Single Select">
+                          <option value="1" selected>Last week</option>
+                          <option value="2">Last month</option>
+                          <option value="3">Last 3 month</option>
+                        </select>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+          </div>
+
+          <!-- tabs -->
+          <div class="row">
+            <div class="col-md-12">
+              <div class="card">
+                <div class="card-header card-header-tabs card-header-success">
+                  <div class="nav-tabs-navigation">
+                    <div class="nav-tabs-wrapper">
+                      <ul class="nav nav-tabs" data-tabs="tabs">
+                        <li class="nav-item">
+                          <a class="nav-link active show" href="#sharkgate" data-toggle="tab">
+                            <i class="material-icons"><img src="img/icons/sharkgate-white.png" alt=""></i>
+                            Sharkgate
+                            <div class="ripple-container"></div>
+                          </a>
+                        </li>
+
+                        <li class="nav-item">
+                          <a class="nav-link set-header-warning" href="#cloudflare" data-toggle="tab">
+                            <i class="material-icons"><img src="img/icons/cloudflare-white.png" alt=""></i>
+                            cloudflare
+                            <div class="ripple-container"></div>
+                            <div class="ripple-container"></div>
+                          </a>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="card-body">
+                  <div class="tab-content">
+                    <div class="tab-pane active show" id="sharkgate">
+                      <div class="row">
+                        <div class="col-md-12">
+                          <div class="card-title card-title-icon">
+                            <img src="img/icons/no-war.png">
+                            <p>
+                              SharkGate - Attacks Blocked
+                              <span class="subtitle">Manage caching settings for your website</span>
+                            </p>
+                          </div>
+
+                          <div class="material-datatables">
+                            <table id="sharkgate_table"
+                                   class="table table-hover"
+                                   cellspacing="0"
+                                   width="100%"
+                                   data-page-length='10'
+                                   style="width:100%">
+                              <thead>
+                              <tr>
+                                <th>Total Blocks</th>
+                                <th>Attack Details</th>
+                                <th>Hacker's IP</th>
+                                <th>Attacked URL</th>
+                                <th>SharkBlock</th>
+                                <th class="disabled-sorting text-right">Actions</th>
+                              </tr>
+                              </thead>
+                              <tbody>
+                              <tr>
+                                <td>2019-09-22T16:13:27.000+0000</td>
+                                <td>Attack Details</td>
+                                <td class="icon-inside">
+                                  <img class="flag-icon" src="img/flags/svg/261-china.svg">111.172.34.40
+                                </td>
+                                <td>/user.php?act=login</td>
+                                <td>www.analogix.com</td>
+                                <td class="actions">
+                                  <span data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    Choose
+                                  </span>
+                                  <div class="dropdown-menu dropdown-menu-right">
+                                    <ul>
+                                      <li>
+                                        <a href="javascript:void(0)"
+                                           class="dropdown-item">
+                                          <span class="text">Edit</span>
+                                          <div class="ripple-container"></div>
+                                        </a>
+                                      </li>
+                                      <li>
+                                        <a href="javascript:void(0)"
+                                           class="dropdown-item">
+                                          <span class="text">Delete</span>
+                                          <div class="ripple-container"></div>
+                                        </a>
+                                      </li>
+                                    </ul>
+                                  </div>
+                              </tr>
+
+                              <tr>
+                                <td>2019-09-22T16:13:27.000+0000</td>
+                                <td>Attack Details</td>
+                                <td class="icon-inside">
+                                  <img class="flag-icon" src="img/flags/svg/261-china.svg">111.172.34.40
+                                </td>
+                                <td>/user.php?act=login</td>
+                                <td>www.analogix.com</td>
+                                <td class="actions">
+                                  <span data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    Choose
+                                  </span>
+                                  <div class="dropdown-menu dropdown-menu-right">
+                                    <ul>
+                                      <li>
+                                        <a href="javascript:void(0)"
+                                           class="dropdown-item">
+                                          <span class="text">Edit</span>
+                                          <div class="ripple-container"></div>
+                                        </a>
+                                      </li>
+                                      <li>
+                                        <a href="javascript:void(0)"
+                                           class="dropdown-item">
+                                          <span class="text">Delete</span>
+                                          <div class="ripple-container"></div>
+                                        </a>
+                                      </li>
+                                    </ul>
+                                  </div>
+                                </td>
+                              </tr>
+
+                              <tr>
+                                <td>2019-09-22T16:13:27.000+0000</td>
+                                <td>Attack Details</td>
+                                <td class="icon-inside">
+                                  <img class="flag-icon" src="img/flags/svg/261-china.svg">111.172.34.40
+                                </td>
+                                <td>/user.php?act=login</td>
+                                <td>www.analogix.com</td>
+                                <td class="actions">
+                                  <span data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    Choose
+                                  </span>
+                                  <div class="dropdown-menu dropdown-menu-right">
+                                    <ul>
+                                      <li>
+                                        <a href="javascript:void(0)"
+                                           class="dropdown-item">
+                                          <span class="text">Edit</span>
+                                          <div class="ripple-container"></div>
+                                        </a>
+                                      </li>
+                                      <li>
+                                        <a href="javascript:void(0)"
+                                           class="dropdown-item">
+                                          <span class="text">Delete</span>
+                                          <div class="ripple-container"></div>
+                                        </a>
+                                      </li>
+                                    </ul>
+                                  </div>
+                                </td>
+                              </tr>
+
+                              <tr>
+                                <td>2019-09-22T16:13:27.000+0000</td>
+                                <td>Attack Details</td>
+                                <td class="icon-inside">
+                                  <img class="flag-icon" src="img/flags/svg/261-china.svg">111.172.34.40
+                                </td>
+                                <td>/user.php?act=login</td>
+                                <td>www.analogix.com</td>
+                                <td class="actions">
+                                  <span data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    Choose
+                                  </span>
+                                  <div class="dropdown-menu dropdown-menu-right">
+                                    <ul>
+                                      <li>
+                                        <a href="javascript:void(0)"
+                                           class="dropdown-item">
+                                          <span class="text">Edit</span>
+                                          <div class="ripple-container"></div>
+                                        </a>
+                                      </li>
+                                      <li>
+                                        <a href="javascript:void(0)"
+                                           class="dropdown-item">
+                                          <span class="text">Delete</span>
+                                          <div class="ripple-container"></div>
+                                        </a>
+                                      </li>
+                                    </ul>
+                                  </div>
+                                </td>
+                              </tr>
+
+                              <tr>
+                                <td>2019-09-22T16:13:27.000+0000</td>
+                                <td>Attack Details</td>
+                                <td class="icon-inside">
+                                  <img class="flag-icon" src="img/flags/svg/261-china.svg">111.172.34.40
+                                </td>
+                                <td>/user.php?act=login</td>
+                                <td>www.analogix.com</td>
+                                <td class="actions">
+                                  <span data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    Choose
+                                  </span>
+                                  <div class="dropdown-menu dropdown-menu-right">
+                                    <ul>
+                                      <li>
+                                        <a href="javascript:void(0)"
+                                           class="dropdown-item">
+                                          <span class="text">Edit</span>
+                                          <div class="ripple-container"></div>
+                                        </a>
+                                      </li>
+                                      <li>
+                                        <a href="javascript:void(0)"
+                                           class="dropdown-item">
+                                          <span class="text">Delete</span>
+                                          <div class="ripple-container"></div>
+                                        </a>
+                                      </li>
+                                    </ul>
+                                  </div>
+                                </td>
+                              </tr>
+
+                              <tr>
+                                <td>2019-09-22T16:13:27.000+0000</td>
+                                <td>Attack Details</td>
+                                <td class="icon-inside">
+                                  <img class="flag-icon" src="img/flags/svg/261-china.svg">111.172.34.40
+                                </td>
+                                <td>/user.php?act=login</td>
+                                <td>www.analogix.com</td>
+                                <td class="actions">
+                                  <span data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    Choose
+                                  </span>
+                                  <div class="dropdown-menu dropdown-menu-right">
+                                    <ul>
+                                      <li>
+                                        <a href="javascript:void(0)"
+                                           class="dropdown-item">
+                                          <span class="text">Edit</span>
+                                          <div class="ripple-container"></div>
+                                        </a>
+                                      </li>
+                                      <li>
+                                        <a href="javascript:void(0)"
+                                           class="dropdown-item">
+                                          <span class="text">Delete</span>
+                                          <div class="ripple-container"></div>
+                                        </a>
+                                      </li>
+                                    </ul>
+                                  </div>
+                                </td>
+                              </tr>
+                              </tbody>
+                            </table>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="tab-pane" id="cloudflare">
+                      <div class="row">
+                        <div class="col-md-12">
+                          <div class="card-title card-title-icon">
+                            <img src="img/icons/firewall.png">
+                            <p>
+                              Firewall Event Log
+                              <span class="subtitle">Requests affected by both Firewall and Web Application Firewall (WAF) rules.</span>
+                            </p>
+                          </div>
+
+                          <div class="material-datatables">
+                            <table id="cloudflare_table"
+                                   class="table table-hover"
+                                   cellspacing="0"
+                                   width="100%"
+                                   data-page-length='10'
+                                   style="width:100%">
+                              <thead>
+                              <tr>
+                                <th>Rule ID</th>
+                                <th>Action Taken</th>
+                                <th>IP Address</th>
+                                <th>Location</th>
+                                <th>Host</th>
+                                <th>Date</th>
+                                <th class="disabled-sorting text-right">Actions</th>
+                              </tr>
+                              </thead>
+                              <tbody>
+                              <tr>
+                                <td>bic</td>
+                                <td>drop</td>
+                                <td>185.222.57.183</td>
+                                <td>NL</td>
+                                <td>parentsoutloud.com</td>
+                                <td>2019-10-01T17:24:30Z</td>
+                                <td class="actions">
+                                  <div class="btn btn-warning btn-slim btn-round">Details</div>
+                                </td>
+                              </tr>
+
+                              <tr>
+                                <td>bic</td>
+                                <td>drop</td>
+                                <td>185.222.57.183</td>
+                                <td>NL</td>
+                                <td>parentsoutloud.com</td>
+                                <td>2019-10-01T17:24:30Z</td>
+                                <td class="actions">
+                                  <div class="btn btn-warning btn-slim btn-round">Details</div>
+                                </td>
+                              </tr>
+
+                              <tr>
+                                <td>bic</td>
+                                <td>drop</td>
+                                <td>185.222.57.183</td>
+                                <td>NL</td>
+                                <td>parentsoutloud.com</td>
+                                <td>2019-10-01T17:24:30Z</td>
+                                <td class="actions">
+                                  <div class="btn btn-warning btn-slim btn-round">Details</div>
+                                </td>
+                              </tr>
+
+                              <tr>
+                                <td>bic</td>
+                                <td>drop</td>
+                                <td>185.222.57.183</td>
+                                <td>NL</td>
+                                <td>parentsoutloud.com</td>
+                                <td>2019-10-01T17:24:30Z</td>
+                                <td class="actions">
+                                  <div class="btn btn-warning btn-slim btn-round">Details</div>
+                                </td>
+                              </tr>
+
+                              <tr>
+                                <td>bic</td>
+                                <td>drop</td>
+                                <td>185.222.57.183</td>
+                                <td>NL</td>
+                                <td>parentsoutloud.com</td>
+                                <td>2019-10-01T17:24:30Z</td>
+                                <td class="actions">
+                                  <div class="btn btn-warning btn-slim btn-round">Details</div>
+                                </td>
+                              </tr>
+
+                              <tr>
+                                <td>bic</td>
+                                <td>drop</td>
+                                <td>185.222.57.183</td>
+                                <td>NL</td>
+                                <td>parentsoutloud.com</td>
+                                <td>2019-10-01T17:24:30Z</td>
+                                <td class="actions">
+                                  <div class="btn btn-warning btn-slim btn-round">Details</div>
+                                </td>
+                              </tr>
+
+                              <tr>
+                                <td>bic</td>
+                                <td>drop</td>
+                                <td>185.222.57.183</td>
+                                <td>NL</td>
+                                <td>parentsoutloud.com</td>
+                                <td>2019-10-01T17:24:30Z</td>
+                                <td class="actions">
+                                  <div class="btn btn-warning btn-slim btn-round">Details</div>
+                                </td>
+                              </tr>
+
+                              <tr>
+                                <td>bic</td>
+                                <td>drop</td>
+                                <td>185.222.57.183</td>
+                                <td>NL</td>
+                                <td>parentsoutloud.com</td>
+                                <td>2019-10-01T17:24:30Z</td>
+                                <td class="actions">
+                                  <div class="btn btn-warning btn-slim btn-round">Details</div>
+                                </td>
+                              </tr>
+
+                              <tr>
+                                <td>bic</td>
+                                <td>drop</td>
+                                <td>185.222.57.183</td>
+                                <td>NL</td>
+                                <td>parentsoutloud.com</td>
+                                <td>2019-10-01T17:24:30Z</td>
+                                <td class="actions">
+                                  <div class="btn btn-warning btn-slim btn-round">Details</div>
+                                </td>
+                              </tr>
+
+                              <tr>
+                                <td>bic</td>
+                                <td>drop</td>
+                                <td>185.222.57.183</td>
+                                <td>NL</td>
+                                <td>parentsoutloud.com</td>
+                                <td>2019-10-01T17:24:30Z</td>
+                                <td class="actions">
+                                  <div class="btn btn-warning btn-slim btn-round">Details</div>
+                                </td>
+                              </tr>
+                              </tbody>
+                            </table>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="row mt-5">
+                        <div class="col-md-12">
+                          <div class="card-title card-title-icon">
+                            <img src="img/icons/unprotected.png">
+                            <p>
+                              Cloudflare Denial of Service Protection
+                              <span class="subtitle">
+                                Prevents denial of service attacks across the network and application layer. These
+                                mitigations are automatically enabled for all customers across all plans.
+                              </span>
+                            </p>
+                          </div>
+
+                          <div class="form-group">
+                            <div class="row">
+                              <div class="col-md-6"><input type="text" placeholder="Group" class="form-control"></div>
+                              <div class="col-md-6"><input type="text" placeholder="Description" class="form-control">
+                              </div>
+                            </div>
+                          </div>
+
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="card-footer">
+                  <p class="card-category">
+                    <a href="javascript:void(0)">API
+                      <i class="material-icons">arrow_right</i>
+                    </a>
+                    <a href="javascript:void(0)">Help<i class="material-icons">arrow_right</i></a>
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- tabs -->
+          <div class="row">
+            <div class="col-md-12">
+              <div class="card">
+                <div class="card-header card-header-tabs card-header-success">
+                  <div class="nav-tabs-navigation">
+                    <div class="nav-tabs-wrapper">
+                      <ul class="nav nav-tabs" data-tabs="tabs">
+                        <li class="nav-item">
+                          <a class="nav-link active show" href="#block_countries" data-toggle="tab">
+                            BLOCK VISITORS<br>
+                            FROM COUNTRIES
+                            <div class="ripple-container"></div>
+                          </a>
+                        </li>
+
+                        <li class="nav-item">
+                          <a class="nav-link" href="#block_continents" data-toggle="tab">
+                            BLOCK VISITORS<br>
+                            FROM CONTINENTS
+                            <div class="ripple-container"></div>
+                          </a>
+                        </li>
+
+                        <li class="nav-item">
+                          <a class="nav-link" href="#allow" data-toggle="tab">
+                            ALWAYS ALLOW<br>
+                            THESE VISITORS
+                            <div class="ripple-container"></div>
+                          </a>
+                        </li>
+
+                        <li class="nav-item">
+                          <a class="nav-link" href="#allow_block" data-toggle="tab">
+                            ALWAYS BLOCK<br>
+                            THESE VISITORS
+                            <div class="ripple-container"></div>
+                          </a>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="card-body">
+                  <div class="tab-content">
+                    <div class="tab-pane active show" id="block_countries">
+                      <div class="card-title card-title-icon">
+                        <img src="img/icons/lock-check-color.png" alt="">
+                        <p>Blocking Visitors From Cybercrime Countries</p>
+                      </div>
+
+                      <div class="duallistbox border-box">
+                        <select multiple="multiple" size="10" name="duallistbox[]" title="duallistbox[]">
+                          <option value="option1">Option 1</option>
+                          <option value="option2">Option 2</option>
+                          <option value="option3" selected="selected">Option 3</option>
+                          <option value="option4">Option 4</option>
+                          <option value="option5">Option 5</option>
+                          <option value="option6" selected="selected">Option 6</option>
+                          <option value="option7">Option 7</option>
+                          <option value="option8">Option 8</option>
+                          <option value="option9">Option 9</option>
+                          <option value="option0">Option 10</option>
+                        </select>
+                      </div>
+
+                      <div class="submit-group">
+                        <div class="btn btn-primary btn-slim btn-round">SAVE CHANGES</div>
+                        <div class="btn btn-default btn-slim btn-round ml-1">DISCARD CHANGES</div>
+                      </div>
+                    </div>
+
+                    <div class="tab-pane" id="block_continents">
+                      <div class="card-title card-title-icon">
+                        <img src="img/icons/world.png" alt="">
+                        Blocking Visitors From Cybercrime Countries
+                      </div>
+
+                      <p class="info-text warning-text">
+                        <img src="img/icons/rounded-info.png" alt="">
+                        <strong>Important!</strong> Please note that Continent blocks supersedes any related Country
+                        blocks
+                      </p>
+
+                      <div class="duallistbox border-box">
+                        <select multiple="multiple" size="10" name="duallistbox[]" title="duallistbox[]">
+                          <option value="option1">Option 1</option>
+                          <option value="option2">Option 2</option>
+                          <option value="option3" selected="selected">Option 3</option>
+                          <option value="option4">Option 4</option>
+                          <option value="option5">Option 5</option>
+                          <option value="option6" selected="selected">Option 6</option>
+                          <option value="option7">Option 7</option>
+                          <option value="option8">Option 8</option>
+                          <option value="option9">Option 9</option>
+                          <option value="option0">Option 10</option>
+                        </select>
+                      </div>
+
+                      <div class="submit-group">
+                        <div class="btn btn-primary btn-slim btn-round">SAVE CHANGES</div>
+                        <div class="btn btn-default btn-slim btn-round ml-1">DISCARD CHANGES</div>
+                      </div>
+                    </div>
+
+                    <div class="tab-pane" id="allow">
+                      <div class="card-title card-title-icon">
+                        <img src="img/icons/hex-check-color.png" alt="">
+                        Allowing IP addresses/ranges
+                      </div>
+
+                      <div class="border-box">
+                        <div class="row justify-content-center">
+                          <div class="col-md-6">
+                            <p class="font-weight-bold text-center size-20">This option allows you to whitelist trusted IP
+                              addresses (certain visitors, your website developer, etc)
+                              so that they will not be blocked by any of the SharkGate firewall protection. This basically
+                              gives them
+                              full unprotected access to your site so please only whitelist IP addresses that you are
+                              absolutely certain
+                              are safe visitors and have clean uninfected computers.</p>
+
+                            <div class="input-icon">
+                              <img src="img/icons/pin-ip.png" alt="">
+                              <input placeholder="IP address" type="text" class="form-control">
+                            </div>
+
+                            <p class="input-description text-center">Separate IP addresses/ranges you want to whitelist with
+                              a comma (,) or new line (enter)</p>
+                          </div>
+                        </div>
+
+                        <div class="submit-group">
+                          <div class="btn btn-primary btn-slim btn-round">SAVE CHANGES</div>
+                          <div class="btn btn-default btn-slim btn-round ml-1">DISCARD CHANGES</div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="tab-pane" id="allow_block">
+                      <div class="card-title card-title-icon">
+                        <img src="img/icons/hex-times-color.png" alt="">
+                        Blocking IP addresses/ranges
+                      </div>
+
+                      <div class="border-box">
+                        <div class="row justify-content-center">
+                          <div class="col-md-6">
+                            <p class="font-weight-bold text-center size-20">
+                              This option allows you to fully block access to your site from certain IP addresses. So block
+                              certain
+                              visitors you noticed are causing you issues. Or even block some competitor you would rather
+                              just keep
+                              away from copying or attacking your site. Once added that visitor will not be able to view or
+                              use any
+                              pages on your website.
+                            </p>
+
+                            <div class="input-icon">
+                              <img src="img/icons/pin-ip.png" alt="">
+                              <input placeholder="IP address" type="text" class="form-control">
+                            </div>
+
+                            <p class="input-description text-center">Separate IP addresses/ranges you want to whitelist with
+                              a comma (,) or new line (enter)</p>
+                          </div>
+                        </div>
+
+
+                        <div class="submit-group">
+                          <div class="btn btn-primary btn-slim btn-round">SAVE CHANGES</div>
+                          <div class="btn btn-default btn-slim btn-round ml-1">DISCARD CHANGES</div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    @@include("../../blocks/modules/footer/footer.html")
+  </div>
+</main>
+@@include("../../blocks/scripts.html")
 </body>
 </html>

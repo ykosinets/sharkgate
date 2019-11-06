@@ -1,12 +1,255 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="en">
 @@include("../../blocks/head.html")
 
 <body>
-@@include("../../blocks/modules/header/header.html", {"title": "Analytics"})
-@@include("../../blocks/modules/footer/footer.html")
-@@include("../../blocks/modules/navigation/navigation.html")
-<script src="../js/main.js"></script>
-<script src="../js/vendor.js"></script>
+<main class="wrapper">
+  @@include("../../blocks/modules/navigation/navigation.html")
+
+  <div class="main-panel">
+    @@include("../../blocks/modules/header/header.html", {"title": "Caching"})
+
+    <div class="content">
+      <div class="content">
+        <div class="container-fluid">
+
+          <!-- title -->
+          <div class="row">
+            <div class="col-md-12">
+              @@include("../../blocks/modules/card/card.html", {
+              "icon": "img/icons/server-xl.png",
+              "title": "Caching",
+              "body": "Manage caching settings for your website"
+              })
+            </div>
+          </div>
+
+          <!-- purge cache -->
+          <div class="row">
+            <div class="col-md-12">
+              <div class="card card-simple">
+                <div class="card-header card-header-success card-header-text">
+                  <h4 class="card-title">Purge Cache:</h4>
+                </div>
+
+                <div class="card-body">
+                  <div class="row">
+                    <div class="col-md-8 mb-md-0 mb-3">
+                      <p>
+                        Clear cached files to force Cloudflare to fetch a fresh version of those files from your web
+                        server.
+                        You can purge files selectively or all at once.
+                      </p>
+                      <p><strong>Note:</strong> Purging the cache may temporarily degrade performance for your website
+                        and increase load on your origin.
+                      </p>
+                      <p>
+                        While purging files, tags or hosts, provide comma-separated URL(s).
+                      </p>
+                    </div>
+
+                    <div class="col-md-4 d-flex flex-column justify-content-start align-items-end">
+                      <select class="selectpicker" data-size="7" data-style="btn btn-bordered btn-round"
+                              title="What to purge">
+                        <option value="1" disabled selected>What to purge</option>
+                        <option value="2">Last month</option>
+                        <option value="3">Last 3 month</option>
+                      </select>
+                      <button class="btn btn-primary btn-slim btn-round">Purge</button>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="card-footer">
+                  <h6>Feature provided by Cloudflare</h6>
+                  <p class="card-category">
+                    <a href="javascript:void(0)">API
+                      <i class="material-icons">arrow_right</i>
+                    </a>
+                    <a href="javascript:void(0)">Help<i class="material-icons">arrow_right</i></a>
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- dev mode -->
+          <div class="row">
+            <div class="col-md-12">
+              <div class="card card-simple">
+                <div class="card-header card-header-success card-header-text">
+                  <h4 class="card-title">Development Mode:</h4>
+                </div>
+
+                <div class="card-body">
+                  <div class="row">
+                    <div class="col-md-8 mb-md-0 mb-3">
+                      <p>
+                        Temporarily bypass our cache allowing you to see changes to your origin server in realtime.
+                      </p>
+                      <p>
+                        <strong>Note:</strong>Enabling this feature can significantly increase origin server load.
+                        Development mode does not purge the cache
+                        so files will need to be purged after development mode expires.
+                      </p>
+                    </div>
+
+                    <div class="col-md-4 d-flex flex-column justify-content-start align-items-end">
+                      <div class="togglebutton">
+                        <label>
+                          <input type="checkbox">
+                          <span class="toggle-text">
+                          <span class="toggle"></span>
+                        </span>
+                        </label>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="card-footer">
+                  <h6>Feature provided by Cloudflare</h6>
+                  <p class="card-category">
+                    <a href="javascript:void(0)">API
+                      <i class="material-icons">arrow_right</i>
+                    </a>
+                    <a href="javascript:void(0)">Help<i class="material-icons">arrow_right</i></a>
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- online -->
+          <div class="row">
+            <div class="col-md-12">
+              <div class="card card-simple">
+                <div class="card-header card-header-success card-header-text">
+                  <h4 class="card-title">Always Online:</h4>
+                </div>
+
+                <div class="card-body">
+                  <div class="row">
+                    <div class="col-md-8 mb-md-0 mb-3">
+                      <p>
+                        If your server goes down, Cloudflare will serve your website’s static pages from our cache.
+                      </p>
+                    </div>
+
+                    <div class="col-md-4 d-flex flex-column justify-content-start align-items-end">
+                      <div class="togglebutton">
+                        <label>
+                          <input type="checkbox">
+                          <span class="toggle-text">
+                          <span class="toggle"></span>
+                        </span>
+                        </label>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="card-footer">
+                  <h6>Feature provided by Cloudflare</h6>
+                  <p class="card-category">
+                    <a href="javascript:void(0)">API
+                      <i class="material-icons">arrow_right</i>
+                    </a>
+                    <a href="javascript:void(0)">Help<i class="material-icons">arrow_right</i></a>
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- browser cache -->
+          <div class="row">
+            <div class="col-md-12">
+              <div class="card card-simple">
+                <div class="card-header card-header-success card-header-text">
+                  <h4 class="card-title">Browser Cache Expiration:</h4>
+                </div>
+
+                <div class="card-body">
+                  <div class="row">
+                    <div class="col-md-8 mb-md-0 mb-3">
+                      <p>
+                        Determine the length of time Cloudflare instructs a visitor’s browser to cache files.
+                        During this period, the browser loads the files from its local cache, speeding up page loads.
+                      </p>
+                    </div>
+
+                    <div class="col-md-4 d-flex flex-column justify-content-start align-items-end">
+                      <select class="selectpicker" data-size="7" data-style="btn btn-bordered btn-round"
+                              title="When to purge">
+                        <option value="1" disabled selected>4 Hours</option>
+                        <option value="2">12 Hours</option>
+                        <option value="3">24 Hours</option>
+                      </select>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="card-footer">
+                  <h6>Feature provided by Cloudflare</h6>
+                  <p class="card-category">
+                    <a href="javascript:void(0)">API
+                      <i class="material-icons">arrow_right</i>
+                    </a>
+                    <a href="javascript:void(0)">Help<i class="material-icons">arrow_right</i></a>
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- level -->
+          <div class="row">
+            <div class="col-md-12">
+              <div class="card card-simple">
+                <div class="card-header card-header-success card-header-text">
+                  <h4 class="card-title">Caching Level:</h4>
+                </div>
+
+                <div class="card-body">
+                  <div class="row">
+                    <div class="col-md-8 mb-md-0 mb-3">
+                      <p>
+                        Determine how much of your website’s static content you want Cloudflare to cache.
+                        Increased caching can speed up page load time.
+                      </p>
+                    </div>
+
+                    <div class="col-md-4 d-flex flex-column justify-content-start align-items-end">
+                      <select class="selectpicker" data-size="7" data-style="btn btn-bordered btn-round"
+                              title="Caching Level">
+                        <option value="1" disabled selected>Aggressive</option>
+                        <option value="2">Passive</option>
+                      </select>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="card-footer">
+                  <h6>Feature provided by Cloudflare</h6>
+                  <p class="card-category">
+                    <a href="javascript:void(0)">API
+                      <i class="material-icons">arrow_right</i>
+                    </a>
+                    <a href="javascript:void(0)">Help<i class="material-icons">arrow_right</i></a>
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    @@include("../../blocks/modules/footer/footer.html")
+  </div>
+</main>
+@@include("../../blocks/scripts.html")
 </body>
 </html>

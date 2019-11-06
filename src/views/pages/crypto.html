@@ -1,12 +1,292 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="en">
 @@include("../../blocks/head.html")
 
 <body>
-@@include("../../blocks/modules/header/header.html", {"title": "Analytics"})
-@@include("../../blocks/modules/footer/footer.html")
-@@include("../../blocks/modules/navigation/navigation.html")
-<script src="../js/main.js"></script>
-<script src="../js/vendor.js"></script>
+<main class="wrapper">
+  @@include("../../blocks/modules/navigation/navigation.html")
+
+  <div class="main-panel">
+    @@include("../../blocks/modules/header/header.html", {"title": "Crypto"})
+
+    <div class="content">
+      <div class="content">
+        <div class="container-fluid">
+
+          <!-- title -->
+          <div class="row">
+            <div class="col-md-12">
+              @@include("../../blocks/modules/card/card.html", {
+              "icon": "img/icons/padlock-xl.png",
+              "title": "Crypto",
+              "body": "Manage cryptography settings for your website"
+              })
+            </div>
+          </div>
+
+          <!-- ssl -->
+          <div class="row">
+            <div class="col-md-12">
+              <div class="card card-simple">
+                <div class="card-header card-header-success card-header-text">
+                  <h4 class="card-title">SSL:</h4>
+                </div>
+
+                <div class="card-body">
+                  <div class="row">
+                    <div class="col-md-8 mb-md-0 mb-3">
+                      <p>
+                        Encrypt communication to and from your website using SSL.
+                      </p>
+                      <p>
+                        It may take up to 24 hours after the site becomes active on Cloudflare for new certificates to
+                        issue.
+                      </p>
+                    </div>
+
+                    <div class="col-md-4 d-flex flex-column justify-content-start align-items-end">
+                      <select class="selectpicker" data-size="7" data-style="btn btn-bordered btn-round"
+                              title="What to purge">
+                        <option value="1" selected>Full</option>
+                        <option value="2">Partial</option>
+                      </select>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="card-footer">
+                  <h6>Feature provided by Cloudflare</h6>
+                  <p class="card-category">
+                    <a href="javascript:void(0)">API
+                      <i class="material-icons">arrow_right</i>
+                    </a>
+                    <a href="javascript:void(0)">Help<i class="material-icons">arrow_right</i></a>
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- auth -->
+          <div class="row">
+            <div class="col-md-12">
+              <div class="card card-simple">
+                <div class="card-header card-header-success card-header-text">
+                  <h4 class="card-title">Authenticated Origin Pulls:</h4>
+                </div>
+
+                <div class="card-body">
+                  <div class="row">
+                    <div class="col-md-8 mb-md-0 mb-3">
+                      <p>
+                        TLS client certificate presented for authentication on origin pull.
+                      </p>
+                    </div>
+
+                    <div class="col-md-4 d-flex flex-column justify-content-start align-items-end">
+                      <div class="togglebutton">
+                        <label>
+                          <input type="checkbox">
+                          <span class="toggle-text">
+                          <span class="toggle"></span>
+                        </span>
+                        </label>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="card-footer">
+                  <h6>Feature provided by Cloudflare</h6>
+                  <p class="card-category">
+                    <a href="javascript:void(0)">API
+                      <i class="material-icons">arrow_right</i>
+                    </a>
+                    <a href="javascript:void(0)">Help<i class="material-icons">arrow_right</i></a>
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- minimum tls -->
+          <div class="row">
+            <div class="col-md-12">
+              <div class="card card-simple">
+                <div class="card-header card-header-success card-header-text">
+                  <h4 class="card-title">Minimum TLS Version:</h4>
+                </div>
+
+                <div class="card-body">
+                  <div class="row">
+                    <div class="col-md-8 mb-md-0 mb-3">
+                      <p>
+                        Only allow HTTPS connections from visitors that support the selected TLS protocol version or
+                        newer.
+                      </p>
+                    </div>
+
+                    <div class="col-md-4 d-flex flex-column justify-content-start align-items-end">
+                      <select class="selectpicker" data-size="7" data-style="btn btn-bordered btn-round"
+                              title="When to purge">
+                        <option value="1" selected>1.0</option>
+                        <option value="2">2.0</option>
+                        <option value="3">3.0</option>
+                      </select>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="card-footer">
+                  <h6>Feature provided by Cloudflare</h6>
+                  <p class="card-category">
+                    <a href="javascript:void(0)">API
+                      <i class="material-icons">arrow_right</i>
+                    </a>
+                    <a href="javascript:void(0)">Help<i class="material-icons">arrow_right</i></a>
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- endcryption -->
+          <div class="row">
+            <div class="col-md-12">
+              <div class="card card-simple">
+                <div class="card-header card-header-success card-header-text">
+                  <h4 class="card-title">Opportunistic Encryption:</h4>
+                </div>
+
+                <div class="card-body">
+                  <div class="row">
+                    <div class="col-md-8 mb-md-0 mb-3">
+                      <p>
+                        Opportunistic Encryption allows browsers to benefit from the improved performance of HTTP/2 by
+                        letting them
+                        know that your site is available over an encrypted connection. Browsers will continue to show
+                        “http” in the address
+                        bar, not “https”.
+                      </p>
+                    </div>
+
+                    <div class="col-md-4 d-flex flex-column justify-content-start align-items-end">
+                      <div class="togglebutton">
+                        <label>
+                          <input type="checkbox">
+                          <span class="toggle-text">
+                          <span class="toggle"></span>
+                        </span>
+                        </label>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="card-footer">
+                  <h6>Feature provided by Cloudflare</h6>
+                  <p class="card-category">
+                    <a href="javascript:void(0)">API
+                      <i class="material-icons">arrow_right</i>
+                    </a>
+                    <a href="javascript:void(0)">Help<i class="material-icons">arrow_right</i></a>
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- routing -->
+          <div class="row">
+            <div class="col-md-12">
+              <div class="card card-simple">
+                <div class="card-header card-header-success card-header-text">
+                  <h4 class="card-title">Onion Routing:</h4>
+                </div>
+
+                <div class="card-body">
+                  <div class="row">
+                    <div class="col-md-8 mb-md-0 mb-3">
+                      <p>
+                        Onion Routing allows routing traffic from legitimate users on the Tor network through
+                        Cloudflare’s onion services
+                        rather than exit nodes, thereby improving privacy of the users and enabling more fine-grained
+                        protection.
+                      </p>
+                    </div>
+
+                    <div class="col-md-4 d-flex flex-column justify-content-start align-items-end">
+                      <div class="togglebutton">
+                        <label>
+                          <input type="checkbox">
+                          <span class="toggle-text">
+                          <span class="toggle"></span>
+                        </span>
+                        </label>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="card-footer">
+                  <h6>Feature provided by Cloudflare</h6>
+                  <p class="card-category">
+                    <a href="javascript:void(0)">API
+                      <i class="material-icons">arrow_right</i>
+                    </a>
+                    <a href="javascript:void(0)">Help<i class="material-icons">arrow_right</i></a>
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- tls 1.3 -->
+          <div class="row">
+            <div class="col-md-12">
+              <div class="card card-simple">
+                <div class="card-header card-header-success card-header-text">
+                  <h4 class="card-title">TLS 1.3:</h4>
+                </div>
+
+                <div class="card-body">
+                  <div class="row">
+                    <div class="col-md-8 mb-md-0 mb-3">
+                      <p>
+                        Enable the latest version of the TLS protocol for improved security and performance.
+                      </p>
+                    </div>
+
+                    <div class="col-md-4 d-flex flex-column justify-content-start align-items-end">
+                      <select class="selectpicker" data-size="7" data-style="btn btn-bordered btn-round"
+                              title="Caching Level">
+                        <option value="1" selected>On</option>
+                        <option value="2">Off</option>
+                      </select>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="card-footer">
+                  <h6>Feature provided by Cloudflare</h6>
+                  <p class="card-category">
+                    <a href="javascript:void(0)">API
+                      <i class="material-icons">arrow_right</i>
+                    </a>
+                    <a href="javascript:void(0)">Help<i class="material-icons">arrow_right</i></a>
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    @@include("../../blocks/modules/footer/footer.html")
+  </div>
+</main>
+@@include("../../blocks/scripts.html")
 </body>
 </html>
